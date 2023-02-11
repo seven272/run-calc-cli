@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ru" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Портал о тритлоне и беге: тренировачные планы по бегу и триатлону, калькулятор темпа, счетчик калорий и другие полезные сервисы" />
+    <link rel="stylesheet" type="text/css" href="../pages/index.css">
+ 
+    <title>Беговой и триатлонный калькулятор</title>
+</head>
+
+<body class="page">
+    <section class="header-other">
+        <div class="header-other__bar-top">
+            <a class="header-other__container-logo" href='../index.html'>
+                <img class="header-other__logo" src="../image/header/logo-tri.jpg" alt="Наш логотип">
+                <h2 class="header-other__site">Trirun.ru <span class="header-other__quote">dum spiro - spero</span>
+                </h2>
+            </a>
+            <div class="header-other__container">
+                <button class="header-other__button-search" type="button">
+                    <span class="header-other__icon-search icon-search"></span>
+                </button>
+                <input class="header-other__search" type="text" placeholder="Поиск...">
+            </div>
+            <ul class="header-other__icons">
+                <li class="header-other__menu-text header-other__icon">menu</li>
+                <li class="header-other__menu header-other__icon icon-menu"></li>
+                <li class="header-other__items">
+                    <p class="header-other__item"><a class='header-other__item-href' href='about.html'>О нас</a></p>
+                    <p class="header-other__item"><a class='header-other__item-href' href='planes.html'>Планы</a></p>
+                    <p class="header-other__item"><a class='header-other__item-href' href='services.html'>Сервисы</a></p>
+                    <p class="header-other__item"><a class='header-other__item-href' href='contact.html'>Контакты</a></p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <main class="content">
+
+        <section class="calculator">
+            <ul class='calculator__header'>
+                <li class='calculator__header-subtitle calculator__header_swim'><a href='#calculator__swim' class='calculator__header-href calculator__header_swim-href'>swim</a></li>
+                <li class='calculator__header-subtitle calculator__header_bike'><a href='#calculator__bike' class='calculator__header-href calculator__header_bike-href'>bike</a></li>
+                <li class='calculator__header-subtitle calculator__header_run'><a href='#calculator__run' class='calculator__header-href calculator__header_run-href'>run</a></li>
+            </ul>
+
+            <div class='calculator__section' id='calculator__swim'>
+
+                <ul class='calculator__values'>
+                    <li class='calculator__value calculator__time'>
+                        <label class="calculator__label">Время:</label>
+                        <input type="text" class='calculator__input calculator-swim__time-hour' placeholder="часы" title="Пожалуйста, вводите только цифры через точку" pattern="^[. 0-9]+$">
+                        <input type="text" class='calculator__input calculator-swim__time-minute' placeholder="минуты" title="Пожалуйста, вводите только цифры через точку" pattern="^[. 0-9]+$">
+                        <input type="text" class='calculator__input calculator-swim__time-second' placeholder="секунды" title="Пожалуйста, вводите только цифры через точку" pattern="^[. 0-9]+$">
+                    </li>
+                    <li class='calculator__value calculator__distance'>
+                        <label class="calculator__label">Дистанция:</label>
+                        <input type="text" class='calculator__input calculator-swim__distance-km' placeholder="метры" title="Пожалуйста, вводите только цифры через точку" pattern="^[. 0-9]+$">
+
+                    </li>
+                    <li class="calculator__value calculator__pace">
+                        <label class="calculator__label">Темп:</label>
+                        <input type="text" class='calculator__input calculator-swim__pace-minute' placeholder="минуты" title="Пожалуйста, вводите только цифры через точку" pattern="^[. 0-9]+$">
+                        <input type="text" class='calculator__input calculator-swim__pace-second' placeholder="секунды" title="Пожалуйста, вводите только цифры через точку" pattern="^[. 0-9]+$">
+                        <p class="calculator__100m">/100 метров</p>
+                    </li>
+                </ul>
+                <div class='calculator__buttons'>
+
+                    <button class='calculator__button calculator-swim__button-result' type="button">Расчитать</button>
+                    <button class='calculator__button calculator-swim__button-clear' type="button">Очистить</button>
+
+                </div>
+                <div class='calculator__result'>
+                    <h2 class='calculator__result-header'>Результат: <span class='calculator__result-header-value'></span></h2>
+                    <ul class="calculator__result-values">
+                        <li class='calculator__result-distance'>Расстояние:<span class='calculator-swim__result-distance-value'>0</span></li>
+                        <li class='calculator__result-pace'>Темп:<span class='calculator-swim__result-pace-value'>0.00</span> </li>
+                        <li class='calculator__result-time'>Время: <span class='calculator-swim__result-time-value'>0</span></li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <div class='calculator__section calculator-bike__section' id='calculator__bike'>
+
+                <ul class='calculator__values'>
+                    <li class='calculator__value calculator__time'>
+                        <label class="calculator__label">Время:</label>
+                        <input type="text" class='calculator__input calculator-bike__time-hour' placeholder="часы" title="Пожалуйста, вводите только цифры через точку" pattern="^[. 0-9]+$">
+                        <input type="text" class='calculator__input calculator-bike__time-minute' placeholder="минуты" title="Пожалуйста, вводите только цифры через точку" pattern="^[. 0-9]+$">
+                        <input type="text" class='calculator__input calculator-bike__time-second' placeholder="секунды" title="Пожалуйста, вводите только цифры через точку" pattern="^[. 0-9]+$">
+                    </li>
+                    <li class='calculator__value calculator__distance'>
+                        <label class="calculator__label">Дистанция:</label>
+                        <input type="text" class='calculator__input calculator-bike__distance-km' placeholder="километров" title="Пожалуйста, вводите только цифры через точку" pattern="^[. 0-9]+$">
+
+                    </li>
+                    <li class="calculator__value calculator__pace">
+                        <label class="calculator__label">Скорость:</label>
+                        <input type="text" class='calculator__input calculator-bike__speed' placeholder="км/ч" title="Пожалуйста, вводите только цифры через точку" pattern="^[. 0-9]+$">
+                    </li>
+                </ul>
+                <div class='calculator__buttons'>
+
+                    <button class='calculator__button calculator-bike__button-result' type="button">Расчитать</button>
+                    <button class='calculator__button calculator-bike__button-clear' type="button">Очистить</button>
+
+                </div>
+                <div class='calculator__result'>
+                    <h2 class='calculator__result-header'>Результат: <span class='calculator__result-header-value'></span></h2>
+                    <ul class="calculator__result-values">
+                        <li class='calculator__result-distance'>Расстояние:<span class='calculator-bike__result-distance-value'>0</span> км</li>
+                        <li class='calculator__result-pace'>Скорость:<span class='calculator-bike__result-pace-value'>0.00</span> </li>
+                        <li class='calculator__result-time'>Время: <span class='calculator-bike__result-time-value'>0</span></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class='calculator__section' id='calculator__run'>
+
+                <ul class='calculator__values'>
+                    <li class='calculator__value calculator__time'>
+                        <label class="calculator__label">Время:</label>
+                        <input type="text" class='calculator__input calculator__time-hour' placeholder="часы" title="Пожалуйста, вводите только цифры через точку" pattern="^[. 0-9]+$">
+                        <input type="text" class='calculator__input calculator__time-minute' placeholder="минуты" title="Пожалуйста, вводите только цифры через точку" pattern="^[. 0-9]+$">
+                        <input type="text" class='calculator__input calculator__time-second' placeholder="секунды" title="Пожалуйста, вводите только цифры через точку" pattern="^[. 0-9]+$">
+                    </li>
+                    <li class='calculator__value calculator__distance'>
+                        <label class="calculator__label">Дистанция:</label>
+                        <input type="text" class='calculator__input calculator__distance-km' placeholder="километров" title="Пожалуйста, вводите только цифры через точку" pattern="^[. 0-9]+$">
+
+                    </li>
+                    <li class="calculator__value calculator__pace">
+                        <label class="calculator__label">Темп:</label>
+                        <input type="text" class='calculator__input calculator__pace-minute' placeholder="минуты" title="Пожалуйста, вводите только цифры через точку" pattern="^[. 0-9]+$">
+                        <input type="text" class='calculator__input calculator__pace-second' placeholder="секунды" title="Пожалуйста, вводите только цифры через точку" pattern="^[. 0-9]+$">
+                    </li>
+                </ul>
+                <div class='calculator__buttons'>
+
+                    <button class='calculator__button calculator__button-result' type="button">Расчитать</button>
+                    <button class='calculator__button calculator__button-clear' type="button">Очистить</button>
+
+                </div>
+                <div class='calculator__result'>
+                    <h2 class='calculator__result-header'>Результат: <span class='calculator__result-header-value'></span></h2>
+                    <ul class="calculator__result-values">
+                        <li class='calculator__result-distance'>Расстояние:<span class='calculator__result-distance-value'>0</span> км</li>
+                        <li class='calculator__result-pace'>Темп:<span class='calculator__result-pace-value'>0.00</span> /км</li>
+                        <li class='calculator__result-time'>Время: <span class='calculator__result-time-value'>0</span></li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <a href="../index.html" class="footer__container-logo">
+                <img class="footer__logo" src="../image/header/logo-tri-white.png" alt="логотип футер">
+                <h1 class="footer__site">Trirun.ru <span class="footer__quote">dum spiro - spero</span></h1>
+            </a>
+            <ul class="footer__menu">
+                <li class="footer__items footer__items-title">
+                    <h3 class="footer__subtitle">Информация</h3>
+                </li>
+                <li class="footer__items">
+                    <a href='about.html' class="footer__item">О нас</a>
+                    <a href='services.html' class="footer__item">Сервисы</a>
+                    <a href='planes.html' class="footer__item">Планы</a>
+                    <a href='contact.html' class="footer__item">Контакты</a>
+                </li>
+            </ul>
+
+            <ul class="footer__socials">
+                <li class="footer__social ">
+                    <a href='https://m.vk.com/rustriathlon' class='footer__social-href icon-vk' target="_blank"></a>
+                </li>
+                <li class="footer__social ">
+                    <a href='https://www.youtube.com/watch?v=tiDb--kwnmw' class='footer__social-href icon-youtube' target="_blank"></a>
+                </li>
+                <li class="footer__social "></li>
+            </ul>
+        </div>
+        <p class="footer__copyright">Copyright &copy 2022 При копировании материалов ссылка на сайт обязательна </p>
+        <p class="footer__counter"><!--LiveInternet counter--><a href="https://www.liveinternet.ru/click"
+            target="_blank"><img id="licntBF27" width="31" height="31" style="border:0" 
+            title="LiveInternet"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+            alt=""/></a><script>(function(d,s){d.getElementById("licntBF27").src=
+            "https://counter.yadro.ru/hit?t45.5;r"+escape(d.referrer)+
+            ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+            (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+            ";h"+escape(d.title.substring(0,150))+";"+Math.random()})
+            (document,screen)</script><!--/LiveInternet--></p>
+    </footer>
+
+    <button class="up-button" type="button">
+        <!-- ↑ -->
+        &uarr;
+    </button>
+    <script src="../js/scroll.js"></script>
+    <script src="../js/menu-other.js"></script>
+    <script src="../js/calculator.js"></script>
+</body>
+
+</html>

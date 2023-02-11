@@ -1,25 +1,54 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../views/Home.vue'
+import Calculator from '@/pages/Calculator.vue'
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    alias: '/calculator',
+    name: 'Calculator',
+    component: Calculator,
+    meta: {
+      layout: 'MainLayout'
+    }
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    path: '/start',
+    name: 'Start',
+    component: () => import('@/pages/Start.vue'),
+    meta: {
+      layout: 'StartLayout'
+    }
+  },
+  {
+    path: '/result',
+    name: 'Result',
+    component: () => import('@/pages/Result.vue'),
+    meta: {
+      layout: 'MainLayout'
+    }
+  },
+  {
+    path: '/plans',
+    name: 'Plans',
+    component: () => import('@/pages/Plans.vue'),
+    meta: {
+      layout: 'MainLayout'
+    }
+  },
+  {
+    path: '/:404page(.*)',
+    name: '404',
+    component: () => import('@/pages/Page404.vue'),
+    meta: {
+      layout: 'MainLayout'
+    }
   }
 ]
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes
+  routes,
+  linkActiveClass: 'calculator__header-subtitle-ative'
 })
 
 export default router
